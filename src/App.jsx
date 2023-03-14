@@ -7,6 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   const goToPreviousFlashcard = () => {
+    {console.log(count)}
     if(count > 0){
 
       setCount(count-1)
@@ -25,25 +26,22 @@ function App() {
 
   const flashcard = [
     {
-  
       name: "start",
       description: "Please start the game by pressing the arrow ",
     },
     {
       name: "2nd me ",
-      description: "answer of the back  ",
-
-
+      description: "answer of the back 1 ",
     }
     ,
     {
       name: "3rd flash card",
-      description: "answer of the back  ",
+      description: "answer of the back 2 ",
 
     },
     {
       name: "4rth flash card",
-      description: "answer of the back  ",
+      description: "answer of the back 3  ",
 
     }
 
@@ -51,16 +49,19 @@ function App() {
   ]
   return (
     <div className="App">
-
+{console.log(count)}
     {/* here is the componenets */}
            <Cards      
-       title={flashcard[count].title}
+       name={flashcard[count].name}
         description={flashcard[count].description}
 
       />
 
-<button onClick={goToNextFlashcard}> next</button>
+{console.log(flashcard)}
+      
 <button onClick={goToPreviousFlashcard}> back </button>
+
+<button onClick={goToNextFlashcard}> next</button>
 
     </div>
   )

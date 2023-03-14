@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const flashcards = (props) => {
+
+    const [flip, setflip] = useState(false);
     return (
         <div   className='card' >
-                 <div >
+                 <div className=' front' >
                   
                 {props.name}
            
             </div>
-            <div >
+            <div className='flashcard'>
                 {props.description}
     
             </div>

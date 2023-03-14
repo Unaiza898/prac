@@ -18,6 +18,15 @@
 
   background-color: green;
 }
+
+.flashcard{
+  backface-visibility: hidden;
+
+
+ /* padding-top: 150px; */
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
